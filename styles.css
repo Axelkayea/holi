@@ -1,0 +1,72 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+    color: rgb(0, 0, 0);
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background:  url(built/image.png), no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+header{
+    background-color: rgba(255, 255, 255, 0.077);
+    font-size: 40px;
+    margin-top: 30px;
+    padding: 40px;
+    border-radius: 30px;
+    justify-self: center;
+    backdrop-filter: blur(3px);
+    border: 2px solid rgba(255, 255, 255, 0.077);
+    transition: 1s ease;
+}
+header:hover{
+    transform: translateX(-4px) translateY(-4px);
+    transform-style: preserve-3d;
+    box-shadow: 3px 3px 0 0 rgba(255, 255, 255, 0.139);
+}
+.cart{
+    width: 60vw;
+    height: 40vh;
+    padding: 7px;
+    margin-top: 40px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .6s ease, transform .6s ease;
+    will-change: opacity, transform;
+    display: flex;
+    flex-direction: column;
+   justify-self: center;
+   text-align: center;
+   font-size: 30px;
+}
+.cart>p{
+    margin: auto 0;
+    align-self: center;
+    text-align: justify;
+    font-size: 25px;
+    transition: 2s ease;
+}
+.cart>h2{
+    color: black;
+    -webkit-text-stroke: .5px black;
+    transition: color 7s ease, -webkit-text-stroke 7s ease;
+}
+.cart>h2:hover{
+    color:  red;
+    -webkit-text-stroke: .5px white;
+}
+.cart.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
